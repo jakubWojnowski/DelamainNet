@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DE9199B1-5369-457A-B8E1-309CACB741C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bootstrapper", "Bootstrapper", "{5F0EB5FB-6B40-4E36-A4E0-42CECFB7148E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelamainNet.Bootstrapper", "src\Bootstrapper\DelamainNet.Bootstrapper\DelamainNet.Bootstrapper.csproj", "{30E38F7A-E1AC-429B-8580-5B42EB8F000A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{458E5B1B-706E-4152-954A-619D055E316D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{30608E2A-862A-4A58-AD2A-1C2E03DA3C7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30E38F7A-E1AC-429B-8580-5B42EB8F000A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30E38F7A-E1AC-429B-8580-5B42EB8F000A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30E38F7A-E1AC-429B-8580-5B42EB8F000A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30E38F7A-E1AC-429B-8580-5B42EB8F000A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5F0EB5FB-6B40-4E36-A4E0-42CECFB7148E} = {DE9199B1-5369-457A-B8E1-309CACB741C5}
+		{30E38F7A-E1AC-429B-8580-5B42EB8F000A} = {5F0EB5FB-6B40-4E36-A4E0-42CECFB7148E}
+		{458E5B1B-706E-4152-954A-619D055E316D} = {DE9199B1-5369-457A-B8E1-309CACB741C5}
+		{30608E2A-862A-4A58-AD2A-1C2E03DA3C7C} = {DE9199B1-5369-457A-B8E1-309CACB741C5}
+	EndGlobalSection
+EndGlobal

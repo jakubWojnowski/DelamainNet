@@ -1,0 +1,6 @@
+@DelamainNet.Bootstrapper_HostAddress = http://localhost:5225
+
+GET {{DelamainNet.Bootstrapper_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
