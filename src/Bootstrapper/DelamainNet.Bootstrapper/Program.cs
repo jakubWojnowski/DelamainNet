@@ -1,44 +1,30 @@
+using DelamainNet.Bootstrapper;
+using DelamainNet.Shared.Infrastructure;
+using DelamainNet.Shared.Infrastructure.Modules;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+var assemblies = ModuleLoader.LoadAssemblies(builder.Configuration);
+var modules = ModuleLoader.LoadModules(assemblies);
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddInfrastructure(assemblies, modules);
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseInfrastructure();
+foreach (var module in modules)
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    module.Use(app);
 }
+app.MapControllers();
 
-app.UseHttpsRedirection();
+app.MapGet("/", () => "Delamain API!");
+app.MapModuleInfo();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+await app.RunAsync();
 
-app.MapGet("/weatherforecast", () =>
-    {
-        var forecast = Enumerable.Range(1, 5).Select(index =>
-                new WeatherForecast
-                (
-                    DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                    Random.Shared.Next(-20, 55),
-                    summaries[Random.Shared.Next(summaries.Length)]
-                ))
-            .ToArray();
-        return forecast;
-    })
-    .WithName("GetWeatherForecast")
-    .WithOpenApi();
+modules.Clear();
+assemblies.Clear();
 
-app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
