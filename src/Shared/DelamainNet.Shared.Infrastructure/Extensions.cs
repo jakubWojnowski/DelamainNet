@@ -1,6 +1,6 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using Confab.Shared.Abstractions.Modules;
+using DelamainNet.Shared.Abstractions.Modules;
 using DelamainNet.Shared.Infrastructure.Api;
 using DelamainNet.Shared.Infrastructure.Messaging;
 using DelamainNet.Shared.Infrastructure.Modules;
@@ -51,7 +51,7 @@ internal static class Extensions
             swagger.CustomSchemaIds(x => x.FullName);
             swagger.SwaggerDoc("v1", new OpenApiInfo
             {
-                Title = "Confab API",
+                Title = "DelamainNet API",
                 Version = "v1"
             });
         });
@@ -87,7 +87,7 @@ internal static class Extensions
         app.UseSwagger();
         app.UseSwaggerUI(swagger =>
         {
-            swagger.SwaggerEndpoint("/swagger/v1/swagger.json", "Confab API");
+            swagger.SwaggerEndpoint("/swagger/v1/swagger.json", "DelamainNet API");
             swagger.RoutePrefix = string.Empty;
         });
 

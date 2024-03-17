@@ -19,7 +19,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Shared\DelamainNet.Shared.Abstractions\DelamainNet.Shared.Abstractions.csproj" />
+      <ProjectReference Include="..\..\Modules\Maintenances\DelamainNet.Modules.Maintenances.Api\DelamainNet.Modules.Maintenances.Api.csproj" />
       <ProjectReference Include="..\..\Shared\DelamainNet.Shared.Infrastructure\DelamainNet.Shared.Infrastructure.csproj" />
     </ItemGroup>
 

@@ -1,6 +1,6 @@
 ﻿using Confab.Shared.Abstractions.Messaging;
-using Confab.Shared.Abstractions.Modules;
 using Confab.Shared.Infrastructure.Messaging.Dispatcher;
+using DelamainNet.Shared.Abstractions.Modules;
 
 namespace DelamainNet.Shared.Infrastructure.Messaging.Brokers;
 

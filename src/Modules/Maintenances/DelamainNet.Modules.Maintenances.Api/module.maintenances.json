@@ -1,0 +1,8 @@
+{
+  "maintenances": {
+    "module": {
+      "name": "maintenances",
+      "enabled": true
+    }
+  }
+}

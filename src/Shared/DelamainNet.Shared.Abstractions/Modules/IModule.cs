@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Confab.Shared.Abstractions.Modules;
+namespace DelamainNet.Shared.Abstractions.Modules;
 
 public interface IModule
 {

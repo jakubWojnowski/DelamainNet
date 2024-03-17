@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using Confab.Shared.Abstractions.Modules;
+using DelamainNet.Shared.Abstractions.Modules;
 
 namespace DelamainNet.Bootstrapper;
 
@@ -7,7 +7,7 @@ internal class ModuleLoader
 {
     public static IList<Assembly> LoadAssemblies(IConfiguration configuration)
     {
-        const string modulePart = "Confab.Modules.";
+        const string modulePart = "DelamainNet.Modules.";
         var assemblies = AppDomain.CurrentDomain.GetAssemblies().ToList();
         var locations = assemblies.Where(x => !x.IsDynamic).Select(x => x.Location).ToArray();
         var files = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, "*.dll")
@@ -22,7 +22,7 @@ internal class ModuleLoader
                 continue;
             }
 
-            var moduleName = file.Split(modulePart)[1].Split(".")[0].ToLowerInvariant();
+            var moduleName = file.Split(modulePart)[1].Split(".")[0].Split(".Core")[0].ToLowerInvariant();
             var enabled = configuration.GetValue<bool>($"{moduleName}:module:enabled");
             if (!enabled)
             {

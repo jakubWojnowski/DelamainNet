@@ -1,7 +1,6 @@
 ﻿using System.Reflection;
-using Confab.Shared.Abstractions.Events;
-using Confab.Shared.Abstractions.Modules;
 using DelamainNet.Shared.Abstractions.Events;
+using DelamainNet.Shared.Abstractions.Modules;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;

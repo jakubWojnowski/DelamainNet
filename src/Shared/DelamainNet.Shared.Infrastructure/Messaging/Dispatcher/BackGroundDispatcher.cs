@@ -1,4 +1,4 @@
-﻿using Confab.Shared.Abstractions.Modules;
+﻿using DelamainNet.Shared.Abstractions.Modules;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 

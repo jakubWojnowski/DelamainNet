@@ -1,7 +1,4 @@
-﻿using System.Threading.Tasks;
-using DelamainNet.Shared.Abstractions.Events;
-
-namespace Confab.Shared.Abstractions.Events
+﻿namespace DelamainNet.Shared.Abstractions.Events
 {
     public interface IEventDispatcher
     {
