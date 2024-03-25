@@ -2,6 +2,7 @@ using DelamainNet.Shared.Abstractions.Modules;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
+
 namespace DelamainNet.Modules.Maintenances.Api
 {
     internal class MaintenancesModule : IModule
